@@ -30,19 +30,19 @@ def read_file(filename):
 #===========================================================================
 #Takes the output from read_file function, extracts only the html symbols and rearranges them
 def remove_unwanted_char(html_ls):
-    html_open_tag = []
-    html_close_tag = []
+    html_open_tags = []
+    html_close_tags = []
     for char in file_char:
         if char == "<":
-            html_open_tag.append(char)
+            html_open_tags.append(char)
         elif char == ">":
-            html_close_tag.append(char)
+            html_close_tags.append(char)
     #appending the closing tag to the openiing tag
-    for char in html_close_tag:
-        html_open_tag.append(char)
+    for char in html_close_tags:
+        html_open_tags.append(char)
     #list_symbol_string = str(new_symbol_open_string)
     #print(html_open_tag)
-    return html_open_tag
+    return html_open_tags
 
 #===========================================================================
 #Takes the output from remove_unwanted_char and checks if symbols balance up
