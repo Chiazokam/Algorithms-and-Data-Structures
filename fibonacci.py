@@ -7,23 +7,25 @@ import time
 
 start = time.time()
 # Fibonacci series will start at 0 and travel upto below number
-Number = int(input("\nPlease Enter the Range Number: "))
+def iter_fabo(Number):
+    print("Iterative Fibonacci sequence:")
+    # Initializing First and Second Values of a Series
+    i = 0
+    First_Value = 0
+    Second_Value = 1
 
-# Initializing First and Second Values of a Series
-i = 0
-First_Value = 0
-Second_Value = 1
+    # Find & Displaying Fibonacci series
+    while(i < Number):
+               if i <= 1:
+                          Next = i
+               else:
+                          Next = First_Value + Second_Value
+                          First_Value = Second_Value
+                          Second_Value = Next
+               print(Next)
+               i = i + 1
 
-# Find & Displaying Fibonacci series
-while(i < Number):
-           if i <= 1:
-                      Next = i
-           else:
-                      Next = First_Value + Second_Value
-                      First_Value = Second_Value
-                      Second_Value = Next
-           print(Next)
-           i = i + 1
+iter_fabo(10)
 end = time.time()
 print(end - start)
 
@@ -43,7 +45,7 @@ nterms = 10
 if nterms < 0:
    print("Plese enter a positive integer")
 else:
-   print("Fibonacci sequence:")
+   print("Recursive Fibonacci sequence:")
    for i in range(nterms):
        print(recur_fibo(i))
 
@@ -61,6 +63,10 @@ sequence.
 """3biii"""
 
 def pascal_triangle(n):
+    """
+    A function to print out the Pascal's triangle. Takes the number of
+    rows to print as its input parameter
+    """
     a=[]
     for i in range(n):
         a.append([])
