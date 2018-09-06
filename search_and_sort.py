@@ -132,4 +132,7 @@ h.put(55, "pig")
 h.put(20, "chicken")
 
 print(h.slots)
-print(h.__contains__())
+print(h.__contains__(44))
+print(h.__len__())
+h.delete(44)
+print(h.slots)
