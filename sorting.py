@@ -65,3 +65,10 @@ a_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 #selection_sort(a_list)
 quick_sort(a_list)
 print(a_list)
+
+'''
+The complexity for the "median-of-three method for selecting a pivot value"
+is 0.049182891845703125 while the complexity for "the technique where the first
+item is used as a pivot" is 0.002001523971557617. Thus, median of three method
+is slower compared to the other technique.
+'''
