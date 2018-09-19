@@ -82,3 +82,4 @@ def pascal_triangle(n):
         print()
 
 pascal_triangle(10)
+# your code is throwing an error on line 76
